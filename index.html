@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf Apps</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css">
+</head>
+<body>
+  <header>
+    <h1><span class="fa-solid fa-book"></span> Bookshelf Apps </h1>
+  </header>
+
+  <main>
+    <div class="tambah-buku card">
+      <h2 class="title">Tambah Buku</h2>
+      <form class="input-buku" id="form" action="">
+        <div class="form-grup">
+          <label for="judul">Judul Buku</label>
+          <input type="text" name="judul" id="judul" required>
+        </div>  
+        <div class="form-grup">
+          <label for="penulis">Penulis Buku</label>
+          <input type="text" name="penulis" id="penulis" required>
+        </div>
+        <div class="form-grup">
+          <label for="tahun">Tahun Terbit</label>
+          <input type="number" name="tahun" id="tahun" required>
+        </div>
+        <div class="form-cek">
+          <input type="checkbox" id="isRead" name="isRead">
+          <label for="isRead">Selesai Dibaca</label>
+        </div>
+        <button type="submit" class="btn-submit" name="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="rak-container card">
+      <h2 class="title">List Buku</h2>
+      <form class="cari-buku" action="">
+        <input type="text" name="cariBuku" id="cariBuku" placeholder="Cari Judul Buku">
+        <button id="btnCari" class="btn-cari" type="submit">Cari</button>
+      </form>
+      <div class="rak-buku">
+        <section class="rak-kiri">
+          <h3 class="title">Belum Selesai Dibaca</h3>
+          <div class="list-buku" id="belumDibaca">
+
+          </div>
+        </section>
+  
+        <section class="rak-kanan">
+          <h3 class="title">Selesai Dibaca</h3>
+          <div class="list-buku" id="selesaiDibaca">
+  
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Copyright &copy 2023 - Ghusan Bookshelf</p>
+  </footer>
+
+  <script src="assets/js/script.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>

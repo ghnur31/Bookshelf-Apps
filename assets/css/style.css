@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Ovo", sans-serif;
+}
+
+header{
+  background-color: mediumseagreen;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+main{
+  text-align: center;
+  align-content: center;
+  margin: 50px auto;
+  max-width: 1200px;
+}
+
+main .tambah-buku{
+  width: 60%;
+  margin: auto;
+  padding: 15px;
+}
+
+.card{
+  box-shadow: 4px 4px 6px 3px mediumseagreen;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+h2.title{
+  font-size: 30px;
+  padding-bottom: 15px;
+  color: mediumseagreen;
+}
+
+h3.title{
+  font-size: 25px;
+  padding-bottom: 15px;
+  color: mediumseagreen;
+  text-decoration: underline;
+}
+
+.form-grup{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-grup input{
+  height: 2.5rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.form-grup label{
+  text-align: left;
+  color: mediumseagreen;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.form-cek{
+  text-align: left;
+  margin-bottom: 15px;
+  color: mediumseagreen;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.form-cek input[type="checkbox"]{
+  transform: scale(2);
+  margin: 0 10px;
+}
+
+.btn-submit{
+  padding: 10px 100px;
+  color: white;
+  background-color: mediumseagreen;
+  border-style: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn-submit:active{
+  transform: scale(0.95);
+}
+
+.rak-container{
+  margin-top: 30px;
+  padding: 15px;
+}
+
+.cari-buku input{
+  width: 50%;
+  margin-bottom: 30px;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.check-button {
+  width: 40px;
+  height: 40px;
+  background: url('../img/check.svg') no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+}
+
+.delete-button {
+  width: 40px;
+  height: 40px;
+  background: url('../img/delete.svg') no-repeat;
+  background-size: contain;
+  margin-left: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.undo-button {
+  width: 40px;
+  height: 40px;
+
+  background: url('../img/undo.png') no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+}
+
+.check-button:focus, .trash-button {
+  outline: none;
+}
+
+.item {
+  border-radius: 16px;
+  margin-top: 16px;
+  padding: 12px 24px 12px 24px;
+  box-shadow: inset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shadow{
+  box-shadow: 1px 1px 5px mediumseagreen;
+}
+
+.item > .inner h2 {
+  margin-bottom: unset;
+  color: mediumseagreen;
+  font-size: 30px;
+}
+
+.item > .inner p {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.inner{
+  text-align: left;
+}
+
+.btn-cari{
+  padding: 10px 20px;
+  background-color: mediumseagreen;
+  color: white;
+  border-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn-cari:active{
+  transform: scale(0.95);
+}
+
+.rak-buku{
+  display: flex;
+  padding: 10px 7px;
+}
+
+.rak-kiri{
+  flex: 1;
+  margin-right: 10px;
+  box-shadow: 0 0 3px grey;
+  padding: 20px 10px 10px 10px; 
+  border-radius: 20px;
+}
+
+.rak-kanan{
+  flex: 1;
+  margin-left: 10px;
+  box-shadow: 0 0 3px grey;
+  padding: 20px 10px 10px 10px; 
+  border-radius: 20px;
+}
+
+footer{
+  background-color: mediumseagreen;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .rak-container{
+    width: 90%;
+    margin: 30px auto;
+  }
+  .rak-kiri{
+    max-width: 50%;
+    margin-right: 0;
+  }
+  .rak-kanan{
+    max-width: 50%;
+    margin-left: 0;
+  }
+} 
+
+@media screen and (max-width: 768px) {
+  main .tambah-buku{
+    width: 70%;
+  }
+
+  .rak-buku{
+    flex-direction: column;
+  }
+  .rak-kiri{
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .rak-kanan{
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  main .tambah-buku{
+    width: 80%;
+    margin: auto;
+  }
+
+  .cari-buku input{
+    width: 65%;
+  }
+
+  .list-buku{
+    padding: 0 0;
+  }
+
+  .item{
+    width: 100%;
+    flex-direction: column;
+    padding: 10px 5px 10px 5px;
+  }
+
+  .inner{
+    margin-bottom: 15px;
+  }
+}
